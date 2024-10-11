@@ -8,19 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var flipBtn: UIButton!
     let chooses = ["HEAD!", "TAILS!"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func flipBtnTapped(_ sender: Any) {
         let choose = chooses.randomElement()
-        showAlert(message: choose!)
-    }
-    func showAlert(message: String) {
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alert, animated: true)
-    }
-}
 
+        if choose == "HEAD!" {
+            if let image = UIImage(named: "Heads") {
+                flipBtn.setImage(image, for: .normal)
+            }
+        } else if choose == "TAILS!" {  // Corrected this block
+            if let image = UIImage(named: "Tails") {
+                flipBtn.setImage(image, for: .normal)
+            }
+        }
+    }
+
+}

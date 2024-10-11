@@ -25,7 +25,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="flipBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ToW-66-urj"/>
+                                    <action selector="flipBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z61-XI-Xoa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,6 +39,9 @@
                             <constraint firstItem="CSr-jo-jd8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nti-T7-mis"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="flipBtn" destination="CSr-jo-jd8" id="f4g-n3-070"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
